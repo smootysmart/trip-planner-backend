@@ -1,0 +1,18 @@
+# .github/workflows/deploy-to-dockerhub.yml
+
+name: Deploy Backend to Docker Hub
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-push-image:
+    name: Push to Docker Hub
+    uses: LSEG-Immersion-Day-DevOps-workshop-2025/actions/.github/workflows/docker-push-ci.yml@main
+    with:
+      image_name: your-dockerhub-username/trip-planner-backend
+      tag: ${{ github.sha }}
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+      DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
