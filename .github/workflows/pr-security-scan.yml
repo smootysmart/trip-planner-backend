@@ -1,0 +1,10 @@
+name: PR Security Scan
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-security-scan:
+    name: Trivy Vulnerability Scan
+    uses: smootysmart/actions/.github/workflows/security-scan-ci.yml@main
