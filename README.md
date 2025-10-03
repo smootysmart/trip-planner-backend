@@ -74,7 +74,7 @@ jobs:
       DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN }}
 ```
 
-4.  Commit the file to your `main` branch.
+4.  Commit the file to your `main` branch..
 
 -----
 
