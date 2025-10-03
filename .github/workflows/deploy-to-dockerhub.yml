@@ -11,7 +11,7 @@ jobs:
     name: Push to Docker Hub
     uses: LSEG-Immersion-Day-DevOps-workshop-2025/actions/.github/workflows/docker-push-ci.yml@main
     with:
-      image_name: your-dockerhub-username/trip-planner-backend
+      image_name: smootysmart/trip-planner-backend
       tag: ${{ github.sha }}
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
